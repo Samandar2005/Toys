@@ -1,0 +1,381 @@
+/*
+-----------------------------------------------------------------------
+    Divider CSS
+-----------------------------------------------------------------------
+*/
+.divider-area {
+  &.divider-style1-area {
+  	background-color: $theme-color3;
+  	position: relative;
+    .divider-content {
+      padding: 112px 0 121px;
+      text-align: center;
+      .title {
+        font-size: 36px;
+        margin-bottom: 12px;
+        @media #{$sm-device} {
+          font-size: 30px;
+        }
+      }
+      p {
+        color: $black;
+        font-family: $font-current-theme2;
+        font-size: 18px;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        @media #{$sm-device} {
+          font-size: 16px;
+        }
+        span {
+        	color: $theme-color;
+        }
+      }
+      .countdown-content {
+        margin-bottom: 100px;
+        @media #{$sm-device} {
+          margin-bottom: 80px;
+        }
+        @media #{$xs-device} {
+          margin-bottom: 70px;
+        }
+        .countdown-timer {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          transform: none;
+          top: 0;
+          left: 0;
+          margin-bottom: 0;
+          bottom: 0;
+          li {
+          	background-image: url("../img/divider/shape5.png");
+            background-color: transparent;
+					  background-size: cover;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            font-size: 48px;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            text-align: center;
+            @media #{$xs-device} {
+              height: 59px;
+              line-height: 0.8;
+              width: 59px;
+            }
+            &:last-child {
+              &:after {
+                display: none;
+              }
+            }
+            + {
+              li {
+                margin-left: 30px;
+                @media #{$lg-device} {
+                  margin-left: 22px;
+                }
+                @media #{$xs-device} {
+                  margin-left: 18px;
+                }
+              }
+            }
+            span {
+              color: $white;
+              font-family: $font-current-theme2;
+              font-size: 30px;
+              line-height: 1;
+              @media #{$xs-device} {
+                font-size: 22px;
+              }
+            }
+            p {
+            	margin-bottom: 0;
+            	margin-top: 26px;
+            	font-weight: 500;
+              @media #{$xs-device} {
+                font-size: 12px;
+                margin-top: 38px;
+              }
+            }
+          }
+        }
+      }
+      .btn-theme {
+        border-radius: 27px;
+        color: $white;
+        font-family: $font-current-theme2;
+        font-size: 16px;
+        padding: 5px 47px;
+        height: 55px;
+        line-height: 44px;
+        text-transform: capitalize;
+        @media #{$xs-device} {
+          font-size: 14px;
+          height: auto;
+          line-height: 1;
+          padding: 15px 32px;
+        }
+        &:hover {
+        	background-color: $theme-color2;
+        }
+      }
+    }
+    .shape-group {
+    	.shape-style1 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 33px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    	}
+    	.shape-style2 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 0;
+        height: 33px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    	}
+    	.shape-style3 {
+    		bottom: 0;
+		    left: -37px;
+		    position: absolute;
+        @media #{$sm-device} {
+          display: none;
+        }
+        img {
+          @media #{$lg-device} {
+            width: 85%;
+          }
+          @media #{$md-device} {
+            width: 70%;
+          }
+        }
+    	}
+      .shape-style4 {
+        bottom: 0;
+        right: -158px;
+        position: absolute;
+        @media #{$lg-device} {
+          right: -200px;
+        }
+        @media #{$md-device} {
+          right: -280px;
+        }
+        @media #{$sm-device} {
+          display: none;
+        }
+        img {
+          @media #{$lg-device} {
+            width: 85%;
+          }
+          @media #{$md-device} {
+            width: 70%;
+          }
+        }
+      }
+      .shape-style6 {
+        bottom: 0;
+        right: -43px;
+        display: inline-block;
+        position: absolute;
+        @media #{$lg-device} {
+          width: 55%;
+        }
+        @media #{$md-device} {
+          display: none;
+        }
+      }
+    }
+  }
+  &.divider-style3-area {
+    padding: 109px 0 110px;
+    @media #{$lg-device} {
+      padding: 90px 0 90px;
+    }
+    @media #{$md-device} {
+      padding: 80px 0;
+    }
+    .thumb {
+      display: inline-block;
+      position: relative;
+      left: 30px;
+      @media #{$lg-device} {
+        left: 0;
+      }
+      @media #{$sm-device} {
+        margin-bottom: 50px;
+      }
+      .shape-group {
+        .shape-style1 {
+          bottom: 0;
+          position: absolute;
+          right: 74px;
+        }
+      }
+      img {
+        @media #{$lg-device} {
+        }
+      }
+    }
+    .divider-content {
+      margin-top: 18px;
+      @media #{$md-device} {
+        margin-top: 0;
+      }
+      .subtitle {
+        color: $theme-color;
+        font-weight: 400;
+        font-size: 36px;
+        margin-bottom: 22px;
+        @media #{$md-device} {
+          font-size: 26px;
+          margin-bottom: 10px;
+        }
+      }
+      .title {
+        font-family: $font-current-theme1;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 43px;
+        margin-bottom: 15px;
+        margin-right: -20px;
+        @media #{$xl-device} {
+          margin-right: 0;
+        }
+        @media #{$md-device} {
+          font-size: 26px;
+          line-height: 34px;
+        }
+      }
+      p {
+        color: #2d2d2d;
+        margin-bottom: 42px;
+        @media #{$md-device} {
+          font-size: 15px;
+          margin-bottom: 24px;
+        }
+      }
+      .btn-theme {
+        border-radius: 30px;
+        color: #fff5ec;
+        font-family: $font-current-theme2;
+        font-weight: 400;
+        font-size: 16px;
+        height: 60px;
+        line-height: 50px;
+        padding: 5px 57.42px;
+        @media #{$md-device} {
+          font-size: 15px;
+          height: auto;
+          line-height: 1;
+          padding: 15px 32px;
+        }
+        &:hover {
+          background-color: $theme-color2;
+        }
+      }
+    }
+  }
+  &.divider-style4-area {
+    padding: 108px 0 121px;
+    @media #{$md-device} {
+      padding: 80px 0;
+    }
+    @media #{$sm-device} {
+      padding: 75px 0 80px;
+    }
+    .divider-wrap {
+      border-radius: 10px;
+      padding: 85px 70px 84px 70px;
+      @media #{$xs-device} {
+        padding: 70px 15px;
+      }
+      .content {
+        position: relative;
+        top: 1px;
+        @media #{$md-device} {
+          margin-bottom: 30px;
+          text-align: center;
+          top: auto;
+        }
+        h2 {
+          color: $white;
+          font-weight: 400;
+          font-size: 36px;
+          line-height: 1.288;
+          @media #{$md-device} {
+            font-size: 32px;
+          }
+          @media #{$xs-device} {
+            font-size: 24px;
+          }
+        }
+      }
+      .newsletter-form {
+        margin-left: 20px;
+        form {
+          position: relative;
+          .form-control {
+            border: 2px solid #e6e6e6;
+            border-radius: 27px;
+            color: #8c8c8c;
+            box-shadow: none;
+            font-size: 14px;
+            height: 54px;
+            padding: 0px 130px 0 30px;
+            &:focus {
+              border-color: $theme-color;
+            }
+          }
+          .btn-theme {
+            border-radius: 23px;
+            color: $white;
+            font-family: $font-current-theme2;
+            font-weight: 400;
+            font-size: 16px;
+            height: 46px;
+            line-height: 1;
+            padding: 5px 21.7px;
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            &:hover {
+              background-color: $theme-color2;
+              border-color: $theme-color2;
+            }
+          }
+        }
+      }
+    }
+    .shape-group {
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      @include translate(-0, -50%);
+      @media #{$md-device} {
+        display: none;
+      }
+      span {
+        background-color: $white;
+        display: inline-block;
+        width: 1px;
+        &:nth-child(1) {
+          height: 60px;
+        }
+        &:nth-child(2) {
+          height: 80px;
+          margin: 0 3px -8px;
+        }
+        &:nth-child(3) {
+          height: 60px;
+        }
+      }
+    }
+  }
+}

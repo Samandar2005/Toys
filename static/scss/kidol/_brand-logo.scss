@@ -1,0 +1,21 @@
+/*
+-----------------------------------------------------------------------
+  Brand Logo CSS
+-----------------------------------------------------------------------
+*/
+
+.brand-logo-area {
+  &.brand-logo-default-area {
+    border-bottom: 1px solid #e3e3e3;
+    border-top: 1px solid #e3e3e3;
+    padding: 48px 0 50px;
+    .container-fluid {
+      padding-left: 25px;
+      padding-right: 15px;
+    }
+    .brand-logo-item {
+    	display: flex;
+    	justify-content: center;
+    }
+  }
+}

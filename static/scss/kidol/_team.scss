@@ -1,0 +1,144 @@
+/*
+-----------------------------------------------------------------------
+    Team CSS
+-----------------------------------------------------------------------
+*/
+.team-area {
+  &.team-default-area {
+  	padding: 105px 0 96px;
+  	@media #{$md-device} {
+  		padding: 70px 0;
+  	}
+		.section-title {
+	    margin-bottom: 171px;
+	  	@media #{$md-device} {
+	  		margin-bottom: 55px;
+	  	}
+		}
+		.team-member {
+			@media #{$sm-device} {
+				max-width: 480px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+  }
+}
+
+.team-member {
+	.thumb {
+		background-color: $theme-color2;
+		border-radius: 10px;
+		height: 321px;
+		position: relative;
+		margin-bottom: 35px;
+		@include transition(all .3s ease-in-out);
+		@media #{$md-device} {
+			height: auto;
+			padding-top: 15px;
+		}
+		&.style-two {
+			img {
+				@media #{$md-device} {
+					width: 94%;
+				}
+				@media #{$sm-device} {
+					width: auto;
+				}
+			}
+		}
+		img {
+			bottom: 0;
+			position: absolute;
+			left: 50%;
+			@include translate(-50%, 0);
+			@media #{$md-device} {
+				bottom: auto;
+				left: auto;
+				position: relative;
+				transform: none;
+			}
+			@media #{$sm-device} {
+				left: 50%;
+				@include translate(-50%, 0);
+			}
+		}
+		.member-icons {
+			position: absolute;
+			bottom: 30px;
+			right: calc(30px - 0px);
+			a {
+				background-color: $white;
+				border-radius: 7px;
+				color: $theme-color;
+				display: block;
+				width: 36px;
+				height: 36px;
+				line-height: 36px;
+				margin-bottom: 8px;
+				opacity: 0;
+				text-align: center;
+				@include translate(40px, 0);
+				@include transition(all .3s ease-in-out);
+				&[class*=action-] {
+          transition-delay: 200ms;
+          &+ a {
+            transition-delay: 250ms;
+            &+ a {
+              transition-delay: 300ms;
+              &+ a {
+                transition-delay: 350ms;
+              }
+            }
+          }
+        }
+				&:hover {
+					background-color: $theme-color4;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.content {
+		text-align: center;
+		.member-info {
+			.name {
+				font-family: $font-current-theme1;
+				font-weight: 400;
+				font-size: 24px;
+				margin-bottom: 8px;
+				@media #{$md-device} {
+					font-size: 20px;
+				}
+				a {
+					color: #3b3a3a;
+					&:hover {
+						color: $theme-color;
+					}
+				}
+			}
+			.designation {
+				color: #3b3a3a;
+				font-family: $font-current-theme1;
+				font-weight: 400;
+				font-size: 18px;
+				@media #{$md-device} {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	&:hover {
+		.thumb {
+			background-color: $theme-color;
+			.member-icons {
+				a {
+		    	opacity: 1;
+		    	transform: translate(0, 0);
+				}
+			}
+		}
+	}
+}

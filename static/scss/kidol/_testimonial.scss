@@ -1,0 +1,90 @@
+/*
+-----------------------------------------------------------------------
+  Testimonial CSS
+-----------------------------------------------------------------------
+*/
+.testimonial-area {
+  &.testimonial-default-area {
+  	background-color: #c0dfe8;
+    padding: 102px 0 123px;
+    position: relative;
+    @media #{$md-device} {
+      padding: 75px 0 123px;
+    }
+    .thumb-style {
+    	bottom: 0;
+	    left: 0;
+	    position: absolute;
+	    min-height: 155px;
+	    width: 100%;
+    }
+  }
+}
+
+.testimonial-slider {
+  margin: 0 -15px;
+  .slick-slide {
+    padding: 30px 15px;
+  }
+  .slick-dots {
+    display: none !important;
+  }
+}
+
+.testimonial-item {
+	.client-content {
+		background-color: $white;
+		border-radius: 10px 10px 10px 0px;
+		position: relative;
+    .inner-content {
+      overflow: hidden;
+      padding: 32px 18px 31px 30px;
+      position: relative;
+    }
+  	.icon {
+  		max-width: 85px; 
+  		position: absolute;
+			top: -7px;
+			left: -11px;
+  	}
+	  p {
+	  	color: #2d2d2d;
+	  	font-size: 18px;
+	  	font-style: italic;
+	  	line-height: 31px;
+	  	position: relative;
+	  }
+    .shape-group {
+      .shape-style1 {
+        bottom: -34px;
+        left: 0;
+        position: absolute;
+      }
+    }
+	}
+  .client-info {
+		align-items: center;
+		display: flex;
+		margin-top: 13px;
+  	.thumb {
+  		img {
+  			border-radius: 50%;
+  			margin-right: 25px;
+        margin-left: 4px;
+  		}
+  	}
+  	.desc {
+      margin-top: 8px;
+      margin-left: 1px;
+  		.title {
+  			color: #3b3a3a;
+  			font-family: $font-current-theme1;
+  			font-size: 18px;
+  			margin-bottom: 1px;
+  		}
+  		p {
+  			color: #3b3a3a;
+  		}
+  	}
+  }
+}

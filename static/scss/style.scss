@@ -1,0 +1,41 @@
+// Table of contents
+@import "tableofcontent";
+
+// Base
+@import "common/variables";
+@import "common/mixins";
+@import "common/rfs";
+
+// Typography
+ @import "common/typography";
+
+// Common Styles
+@import "kidol/common";
+@import "kidol/navbar";
+
+// Header
+@import "header/header";
+
+// Banner Styles
+@import "kidol/banner";
+
+// Components
+@import "kidol/about";
+@import "kidol/team";
+@import "kidol/testimonial";
+@import "kidol/brand-logo";
+@import "kidol/divider";
+@import "kidol/featured";
+@import "kidol/form";
+@import "kidol/shop";
+
+
+
+// Blog
+@import "kidol/blog";
+
+// Contact
+@import "kidol/contact";
+
+// Footer
+@import "footer/footer";

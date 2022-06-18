@@ -1,0 +1,57 @@
+/*
+-----------------------------------------------------------------------
+    Contact CSS
+-----------------------------------------------------------------------
+*/
+
+.contact-page-wrap {
+	background-color: #fbfbfb;
+	.contact-info-items {
+		padding: 110px 0 107px;
+		@media #{$md-device} {
+			padding: 80px 0;
+		}
+		.contact-info-item {
+			background-color: $white;
+			border-radius: 10px;
+			box-shadow: -4px 0px 20px 0px rgba(0, 0, 0, 0.1);
+			padding: 50px 24px 43px 25px;
+			.icon {
+				margin-bottom: 37px;
+			}
+			h2 {
+				color: #2e2e2e;
+				font-weight: 400;
+				font-size: 24px;
+				margin-bottom: 15px;
+			}
+			.content {
+				p {
+					color: $black;
+					font-size: 18px;
+				}
+				a {
+					color: $black;
+					font-size: 18px;
+					&:hover {
+						color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+.contact-map-area {
+  height: 500px;
+  @media #{$lg-device} {
+    height: 380px;
+  }
+  @media #{$md-device} {
+    height: 220px;
+  }
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}

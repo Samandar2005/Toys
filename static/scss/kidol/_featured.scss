@@ -1,0 +1,52 @@
+/*
+-----------------------------------------------------------------------
+  Featured CSS
+-----------------------------------------------------------------------
+*/
+.featured-area {
+  &.featured-default-area {
+  	padding: 110px 0 100px;
+  	@media #{$md-device} {
+  		padding: 80px 0;
+  	}
+  }
+}
+
+.featured-item {
+	border: 4px solid #f6f6f6;
+	padding: 36px 20px 31px;
+	position: relative;
+	text-align: center;
+	@include transition(all .4s ease-in-out);
+	&:hover {
+		border-color: $theme-color;
+	}
+	.icon {
+		img {
+			margin-bottom: 16px;
+		}
+	}
+	.featured-info {
+		.title {
+			color: #494949;
+			font-size: 24px;
+			margin-bottom: 17px;
+			@media #{$md-device} {
+				font-size: 20px;
+			}
+		}
+		p {
+			color: #2d2d2d;
+			font-size: 16px;
+			line-height: 1.7;
+		}
+	}
+	.shape-group {
+		.shape-style1 {
+			bottom: -2px;
+			position: absolute;
+			right: -4px;
+			z-index: -1;
+		}
+	}
+}

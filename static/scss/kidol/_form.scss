@@ -1,0 +1,510 @@
+/*
+-----------------------------------------------------------------------
+	Form CSS
+-----------------------------------------------------------------------
+*/
+
+// Contact Form Style
+.contact-form {
+	padding: 104px 0 80px;
+  @media #{$md-device} {
+    padding: 75px 0 52px;
+  }
+	.contact-form-wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+		.section-title {
+			margin-bottom: 53px;
+			text-align: center;
+			.title {
+				font-weight: 400;
+				font-size: 36px;
+			}
+		}
+		.form-group {
+			.form-control {
+				border-radius: 15px;
+				letter-spacing: .15px;
+			}
+      textarea {
+        &.form-control {
+          min-height: 200px;
+          @media #{$md-device} {
+            min-height: 170px;
+          }
+        }
+      }
+			.btn-theme {
+				border-radius: 35px;
+				height: 70px;
+				padding: 10px 59.8px;
+			}
+		}
+	}
+}
+
+// Comment Form Style
+.comment-form-wrap {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  padding: 46px 40px 21px 40px;
+  @media #{$lg-device} {
+    margin-bottom: 70px;
+  }
+  @media #{$sm-device} {
+    padding: 33px 18px 10px 18px;
+  }
+  .comment-form-wrapper {
+    .title {
+	  	color: #535353;
+	    font-weight: 400;
+	    font-size: 24px;
+	    margin-bottom: 55px;
+	    position: relative;
+	    &:before {
+	      background-color: #ee3231;
+	      content: "";
+	      width: 9px;
+	      height: 17px;
+	      position: absolute;
+	      left: -40px;
+	      top: 4px;
+	    }
+	  }
+    .form-group {
+      textarea {
+        &.form-control {
+          @media #{$sm-device} {
+            min-height: 160px;
+          }
+        }
+      }
+      .btn-theme {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+.form-group {
+  margin-bottom: 30px;
+  .form-control {
+    border-color: #d7d7d7;
+    border-radius: 24.5px;
+    box-shadow: none;
+    color: $black;
+    height: 49px;
+    font-size: 14px;
+    font-style: italic;
+    padding: 8px 17px 7px 17px;
+    @include transition(all .3s ease-in-out);
+    @include placeholder {
+      color: $black-999;
+    }
+    &:focus {
+      border-color: $theme-color;
+      @include placeholder {
+        color: $black;
+      }
+    }
+  }
+  textarea {
+    border-radius: 15px !important;
+    min-height: 250px;
+    padding: 25px 18px !important;
+  }
+  .btn-theme {
+    border-radius: 32px;
+    font-family: $font-current-theme2;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 30px;
+    height: 64px;
+    padding: 10px 49.52px;
+  }
+}
+
+// Login Register Table
+.login-register-area {
+  padding: 110px 0 100px;
+  @media #{$lg-device} {
+    padding: 80px 0 90px;
+  }
+  @media #{$md-device} {
+    padding: 60px 0 70px;
+  }
+}
+
+.login-register-title {
+  h2 {
+    font-family: $font-current-theme2;
+    font-weight: 400;
+    font-size: 36px;
+    margin: 0 0 15px;
+    line-height: 1;
+  }
+  p {
+    font-family: $font-current-theme1;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #999;
+    width: 85%;
+    @media #{$sm-device} {
+      width: 100%;
+    }
+  }
+}
+
+.login-register-pr {
+  padding-right: 100px;
+  @media #{$lg-device} {
+    padding-right: 0;
+  }
+}
+
+.login-register-pl {
+  padding-left: 100px;
+  @media #{$lg-device} {
+    padding-left: 0;
+  }
+  @media #{$sm-device} {
+    margin-top: 40px;
+  }
+}
+
+.login-register-border {
+  border-right: 1px solid #e5e5e5;
+  @media #{$sm-device} {
+    border: none;
+  }
+}
+
+.login-register-content {
+  &.lr-content-padding-mrg {
+    margin: auto;
+    max-width: 20.8333333333%;
+    padding: 76px 0 120px;
+  }
+  .login-register-style {
+    margin: 33px 0 0;
+    p {
+      color: $black;
+      font-family: $font-current-theme1;
+      font-size: 15px;
+      line-height: 1.8;
+      margin: 0 0 35px;
+    }
+    form {
+      .login-register-input {
+        position: relative;
+        margin-bottom: 10px;
+        input {
+          color: #495057;
+          width: 100%;
+          height: 51px;
+          background-color: transparent;
+          border: 1px solid #e5e5e5;
+          font-family: $font-current-theme1;
+          padding: 2px 80px 2px 16px;
+          font-size: 15px;
+          &::-webkit-input-placeholder {
+            color: #495057;
+            opacity: 1;
+          }
+          &::-moz-input-placeholder {
+            color: #495057;
+            opacity: 1;
+          }
+          &:focus {
+            border-color: $theme-color;
+          }
+        }
+        .forgot {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          a {
+            color: #4bb1cf;
+            font-family: $font-current-theme1;
+            font-size: 15px;
+          }
+        }
+      }
+      .login-register-paragraph {
+        border-bottom: 1px solid #e5e5e5;
+        border-top: 1px solid #e5e5e5;
+        padding: 15px 0;
+        margin: 30px 0 30px;
+        p {
+          font-family: $font-current-theme1;
+          font-size: 14px;
+          color: #666;
+          line-height: 1.9;
+          margin: 0;
+          a {
+            font-size: 14px;
+            color: $theme-color;
+            &:hover {
+              color: $theme-color2;
+            }
+          }
+        }
+      }
+      .remember-me-btn {
+        display: flex;
+        align-items: center;
+        margin: 19px 0 0px;
+        input {
+          cursor: pointer;
+          width: auto;
+          height: auto;
+          margin-right: 10px;
+        }
+        label {
+          color: $black;
+          font-family: $font-current-theme1;
+          font-size: 15px;
+        }
+      }
+      .btn-style-3 {
+        margin: 21px 0 0px;
+        button {
+          font-family: $font-current-theme2;
+          font-size: 16px;
+          border-radius: 3px;
+          font-weight: 400;
+          color: $white;
+          background-color: $theme-color;
+          border: none;
+          line-height: 1;
+          width: 100%;
+          text-align: center;
+          padding: 19px 10px 22px;
+          text-transform: uppercase;
+          &:hover {
+            background-color: $theme-color2;
+          }
+        }
+      }
+    }
+    .register-benefits {
+      background-color: #f3f3f3;
+      padding: 40px 30px;
+      margin-top: 60px;
+      @media #{$md-device} {
+        padding: 30px 20px;
+      }
+      h3 {
+        color: $black;
+        font-family: $font-current-theme1;
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin: 0 0 20px;
+      }
+      p {
+        line-height: 1.6;
+        font-family: $font-current-theme1;
+        font-size: 14px;
+        color: #666;
+        margin: 0 0 28px;
+      }
+      ul {
+        margin: 0;
+        li {
+          font-family: $font-current-theme1;
+          font-size: 18px;
+          color: $black;
+          margin: 0 0 16px;
+          @media #{$lg-device} {
+            font-size: 15px;
+          }
+          &:last-child {
+            margin: 0 0 0;
+          }
+          i {
+            font-size: 20px;
+            color: $theme-color2;
+            margin-right: 15px;
+            position: relative;
+            top: 4px;
+            @media #{$lg-device} {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// My Account Table
+.my-account-area {
+  padding: 110px 0 100px;
+  @media #{$lg-device} {
+    padding: 80px 0 90px;
+  }
+}
+.myaccount-tab-menu {
+  flex-direction: column;
+  @media #{$sm-device} {
+    margin-bottom: 40px;
+  }
+  &.nav-tabs {
+    .nav-link {
+      background-color: transparent;
+      border: 1px solid #e5e5e5;
+      border-bottom: none;
+      border-radius: 0;
+      color: $black;
+      font-family: $font-current-theme2;
+      font-size: 15px;
+      display: block;
+      padding: 10px 15px;
+      text-align: left;
+      text-transform: capitalize;
+      &:last-child {
+        border-bottom: 1px solid #e5e5e5;
+      }
+      &.active {
+        background-color: $theme-color;
+      }
+      &:hover,
+      &.active {
+        background-color: $theme-color;
+        border-color: $theme-color;
+        color: $white;
+      } 
+    }
+  }
+}
+
+.myaccount-content {
+  border: 1px solid #eeeeee;
+  padding: 30px;
+  @media #{$lg-device} {
+    padding: 20px;
+  }
+  form {
+    margin-top: -20px;
+  }
+  .check-btn {
+    &:hover {
+      color: $theme-color2;
+    }
+  }
+  h3 {
+    font-family: $font-current-theme2;
+    font-weight: 400;
+    font-size: 20px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+  }
+  .welcome {
+    a {
+      font-family: $font-current-theme2;
+      &:hover {
+        color: $theme-color2;
+      }
+    }
+    strong {
+      font-family: $font-current-theme1;
+      font-weight: 400;
+      color: $theme-color;
+    }
+  }
+  p {
+    font-family: $font-current-theme1;
+    line-height: 28px;
+    margin-bottom: 2px;
+  }
+  fieldset {
+    margin-top: 20px;
+    & legend {
+      font-family: $font-current-theme1;
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-weight: 400;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
+  .account-details-form {
+    margin-top: 50px;
+    .single-input-item {
+      margin-bottom: 20px;
+      label {
+        font-family: $font-current-theme1;
+        font-size: 14px;
+        text-transform: capitalize;
+        display: block;
+        margin: 0 0 5px;
+      }
+      input {
+        border: 1px solid #e8e8e8;
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+        padding: 2px 20px;
+        color: #1f2226;
+        font-family: $font-current-theme1;
+        font-size: 13px;
+        &:focus {
+          border: 1px solid $theme-color;
+        }
+      }
+      button {
+        border: none;
+        background-color: $theme-color;
+        font-family: $font-current-theme2;
+        font-weight: 400;
+        padding: 9px 25px;
+        color: $white;
+        font-size: 13px;
+        @include transition(all .3s ease-in-out);
+        &:hover {
+          background-color: $theme-color2;
+        }
+      }
+    }
+  }
+}
+
+.myaccount-table {
+  white-space: nowrap;
+  font-family: $font-current-theme1;
+  font-size: 14px;
+  table,
+  .table {
+    th {
+      padding: 10px;
+      font-family: $font-current-theme1;
+      font-weight: 600;
+      background-color: #f8f8f8;
+      border-color: #ccc;
+      border-bottom: 0;
+      color: #1f2226;
+    }
+
+    td {
+      padding: 10px;
+      vertical-align: middle;
+      border-color: #ccc;
+      a {
+        font-family: $font-current-theme1;
+        font-size: 14px;
+        color: $black;
+      }
+    }
+  }
+}
+
+.saved-message {
+  background-color: #fff;
+  border-top: 3px solid $theme-color;
+  font-family: $font-current-theme1;
+  font-size: 14px;
+  padding: 20px 0;
+  color: #333;
+}
