@@ -5,4 +5,5 @@ from django.views.decorators.cache import cache_page
 urlpatterns = [
     path('', index),
     path('main/', index, name='main'),
+    path('about/', about, name='about'),
 ]
