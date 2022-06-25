@@ -1081,6 +1081,8 @@ ul.top_icon li a {
      text-transform: uppercase;
 }
 
+
+}
 .main-menu ul li:last-child a {
      padding-right: 0;
 }
@@ -1158,7 +1160,7 @@ ul.top_icon li a {
 .main-menu ul>li a:hover {
      color: #fff;
 }
-.main-menu ul>li:nth-chil(6) {
+.main-menu ul>li:nth-child (6) {
      padding-right: 0px;
 }
 .nav>li {
@@ -1651,7 +1653,7 @@ display: block;
 font-weight: normal;
 }
 .clothes_main{
-     width: 100%;
+     width: 100%; 
      float: left;
      background-color: #081b30;
      height: auto;
@@ -1884,7 +1886,7 @@ img.zoom {
      margin: 0px;
 }
 form {
-     background: #081b30;
+     background: #081b30
      padding: 35px 30px;
 }
 .map_section figure img {
@@ -2158,7 +2160,7 @@ ul.location_icon span {
     padding: 40px 0px 20px 0px;
     min-height: 450px;
 
-}
+}  
 
 .sport_product h3 {
      font-size: 29px;
@@ -2172,30 +2174,30 @@ line-height: 24px;
 padding: 10px 0px 0px 0px;
 }
 .price_text{
-
+    
      text-align: center;
 font-size: 29px;
 color: #136af8;
 padding-top: 25px;
 line-height: 25px;
 font-weight:normal;
-}
+} 
 
 .price{
-
+  
      text-align: center;
      font-size: 29px;
      color: #081b30;
-}
+} 
 
 .basket_text{
-
+     
      text-align: center;
      font-size: 20px;
      color: #000;
      padding: 0;
 
-line-height: 18px;
+line-height: 18px;  
 }
 
 .sport_product_main{
@@ -2227,9 +2229,9 @@ line-height: 18px;
      width: 100%;
 }
 
-.sporrt_text{
-     width: 100%;
-     float: left;
+.sporrt_text{ 
+     width: 100%; 
+     float: left; 
 
      color: #fffcf4;
      margin-top: 80px;
@@ -2239,22 +2241,22 @@ font-weight: bold;
 
 line-height: 30px;
 }
-.lorem_text{
+.lorem_text{ 
      width: 100%;
-     float: left;
-     font-size: 16px;
+     float: left; 
+     font-size: 16px; 
      color: #fffcf4;
-     margin: 0px;
+     margin: 0px; 
 }
 
-.btn_main{
-     width: 100%;
+.btn_main{ 
+     width: 100%; 
      float: left;
      margin-top: 58px;
 }
 
 .Clients{
-     width: 100%;
+     width: 100%; 
      float: left;
 }
 
@@ -2263,12 +2265,12 @@ line-height: 30px;
      float: left;
 }
 
-.section .Clients_2{
-     width: 100%;
-     float: left;
+.section .Clients_2{ 
+     width: 100%; 
+     float: left; 
 }
-.john{
-     width: 100%;
+.john{ 
+     width: 100%; 
      float: left;
      background-color: #136af8;
      height: auto;
@@ -2325,10 +2327,10 @@ line-height: 30px;
 }
 
 .contact_us_2{
-     width: 100%;
+     width: 100%; 
      float: left;
      background-image: url(../images/contact-banner.png);
-     height: auto;
+     height: auto;  
      padding-top: 100px;
      padding-bottom: 100px;
      background-size: cover;
@@ -2368,7 +2370,7 @@ line-height: 30px;
 }
 
 .contact_us_3{
-     width: 100%;
+     width: 100%; 
      float: left;
      background-color: #081b30;
      height:auto;
@@ -2377,13 +2379,13 @@ line-height: 30px;
     top: -40px;
 }
 .long_text{
-     width: 100%;
+     width: 100%; 
      float: left;
      color: #ffffff;
      margin: 0px;
 }
 
-.email_text{
+.email_text{ 
      width: 100%;
      float: left;
      margin-top: 30px;
@@ -2416,13 +2418,13 @@ line-height: 30px;
      float: left;
  }
  .home{
-     width: 100%;
+     width: 100%; 
      float: left;
-     color: #fff;
+     color: #fff; 
 }
 
  .address{
-     padding-left: 30px;
+     padding-left: 30px; 
      color: #fff;
  }
 
@@ -2433,12 +2435,12 @@ line-height: 30px;
  }
 
  .menu_text{
-     width: 100%;
+     width: 100%; 
      float: left;
      margin-top: 40px;
-     margin-bottom: 30px;
+     margin-bottom: 30px; 
 }
- .menu_text ul{
+ .menu_text ul{ 
      margin: 0px;
      padding: 0px;
 
@@ -2463,12 +2465,12 @@ line-height: 30px;
      width: 100%;
      float: left;
      background-color: #136af8;
-     height: auto;
+     height: auto; 
      padding: 0px;
 }
 
 
-.main_btn{
+.main_btn{ 
      width: 100%;
      margin: 0 auto;
      text-align: center;
@@ -2478,8 +2480,8 @@ line-height: 30px;
     margin-top: 90px;
     margin-bottom: -105px;
     box-shadow: 0px 0px 8px 0px;
-    color: #0a1422;
-}
+    color: #0a1422; 
+}   
 
 .site_info {
     display: flex;
@@ -2489,8 +2491,8 @@ line-height: 30px;
 
 .info_icon {
     background-color: #fff;
-    padding: 20px;
-    margin-right: 30px;
+    padding: 20px;  
+    margin-right: 30px;  
     width: 60px;
 height: 60px;
 border-radius: 10px;
@@ -2519,7 +2521,7 @@ button.btn.btn-primary,button.btn.btn-primary:hover,button.btn.btn-primary:focus
 }
 
 .padding_bottom_0 {
-     padding-bottom: 0 !important;
+     padding-bottom: 0 !important; 
 }
 
 
@@ -2553,7 +2555,7 @@ button.btn.btn-primary,button.btn.btn-primary:hover,button.btn.btn-primary:focus
      color: #fff;
 }
 
-.plane_secsun_2{
+.plane_secsun_2{ 
      width: 100%;
      float: left;
      margin-top: 30px;

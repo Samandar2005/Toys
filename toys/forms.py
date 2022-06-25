@@ -16,7 +16,7 @@ class UserRegisterModelForm(forms.ModelForm):
         }
 
 
-class ShoesForm(forms.ModelForm):
+class ToysForm(forms.ModelForm):
     class Meta:
         model = Toys
         fields = '__all__'

@@ -17,6 +17,7 @@ def about(request):
     return render(request, "about.html")
 # Create your views here.
 
+
 @login_required
 def profile(request):
     return render(request, 'user-profile.html')
@@ -26,10 +27,14 @@ def order(request):
     return render(request, 'order.html')
 
 
+def testmonial(request):
+    return render(request, 'testmonial.html')
+
+
 def index(request):
     bks = Toys.objects.all()
     context = {'toys': bks}
-    return render(request, "base.html", context=context)
+    return render(request, "index.html", context=context)
 
 
 class CategoryListView(ListView):
@@ -139,38 +144,6 @@ class Category_typeDeleteView(DeleteView):
     success_url = '/category_type'
 
 
-class ImgListView(ListView):
-    template_name = 'img.html'
-    context_object_name = 'img'
-
-    def get_queryset(self):
-        url_data = self.request.GET
-        q = Img.objects.all()
-        return q
-
-
-class ImgCreateView(CreateView):
-    queryset = Img.objects.all()
-    template_name = 'img-add.html'
-    fields = "__all__"
-
-    success_url = '/img'
-
-
-class ImgUpdateView(UpdateView):
-    queryset = Img.objects.all()
-    template_name = 'img-add.html'
-    fields = "__all__"
-    success_url = '/img'
-
-
-class ImgDeleteView(DeleteView):
-    queryset = Img.objects.all()
-    template_name = 'img-delete.html'
-    fields = "__all__"
-
-    success_url = '/img'
-
 class DeliveryListView(ListView):
     template_name = 'delivery.html'
     context_object_name = 'delivery'
@@ -185,7 +158,7 @@ class DeliveryListView(ListView):
 
 
 class DeliveryCreateView(CreateView):
-    queryset = Category_type.objects.all()
+    queryset = Delivery.objects.all()
     template_name = 'delivery-add.html'
     fields = "__all__"
 
@@ -193,14 +166,14 @@ class DeliveryCreateView(CreateView):
 
 
 class DeliveryUpdateView(UpdateView):
-    queryset = Category_type.objects.all()
+    queryset = Delivery.objects.all()
     template_name = 'delivery-add.html'
     fields = "__all__"
     success_url = '/delivery'
 
 
 class DeliveryDeleteView(DeleteView):
-    queryset = Category_type.objects.all()
+    queryset = Delivery.objects.all()
     template_name = 'delivery-delete.html'
     fields = "__all__"
 
@@ -208,14 +181,13 @@ class DeliveryDeleteView(DeleteView):
 
 
 class ToysListView(ListView):
-    template_name = 'shoes-1.html'
-    context_object_name = 'shoes'
+    template_name = 'toys.html'
+    context_object_name = 'toys'
 
     def get_queryset(self):
-        xaridor = Group.objects.get(name='Xaridor')
-        if self.request.user.has_perm("can_view_toys") or xaridor in self.request.user.groups.all():
-            q = Toys.objects.all()
-            return q
+        url_data = self.request.GET
+        q = Toys.objects.all()
+        return q
 
 
 class ToysCreateView(CreateView):
@@ -240,7 +212,6 @@ class ToysDeleteView(DeleteView):
     fields = "__all__"
 
     success_url = '/toys'
-
 
 
 def user_login_view(request):
