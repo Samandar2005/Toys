@@ -35,13 +35,10 @@
    </head>
    <!-- body -->
    <body class="main-layout">
-      <!-- loader  -->
-
-      <!-- end loader -->
-      <!-- header -->
       <header class="section">
          <!-- header inner -->
-         <div class="header">
+        <div class="header_main">
+         <div class="header_main">
             <div class="container">
                <div class="row">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
@@ -59,9 +56,8 @@
                                  <li> <a href="{% url 'main' %}">Home</a> </li>
                                  <li> <a href="{% url 'about' %}">About</a> </li>
                                  <li> <a href="{% url 'testmonial' %}">Testmonial</a> </li>
-                                 <li><a href="{% url 'main' %}">Testmonial</a></li>
-                                 <li><a href="{% url 'main' %}">Shop</a></li>
-                                 <li><a href="{% url 'main' %}">Contact Us</a></li>
+                                 <li><a href="{% url 'clients' %}">Shop</a></li>
+                                 <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                  <li class="last"><a href="#"><img src="{% static 'images/search_icon.png' %}" alt="icon"/></a></li>
                               </ul>
                            </nav>
@@ -71,17 +67,29 @@
                </div>
             </div>
          </div>
+        </div>
          <!-- end header inner -->
       </header>
-      <!-- end header -->
-      {% block navbar %}{% endblock %}
+      <div>
+         {% block navbar %}{% endblock %}
+      </div>
       <div>
          {% block about %}{% endblock %}
       </div>
+      <div>
+         {% block clients %}{% endblock %}
+      </div>
+      <div>
+         {% block testmonial %}{% endblock %}
+      </div>
 
-      {% block testmonial %}{% endblock %}
-      {% block contact  %}{% endblock %}
-      {% block footer  %}{% endblock %}
+      <div>
+         {% block contact  %}{% endblock %}
+      </div>
+
+      <div>
+         {% block footer  %}{% endblock %}
+      </div>
       <div id="plant" class="footer layout_padding">
          <div class="container">
             <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>

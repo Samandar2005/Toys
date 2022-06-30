@@ -81,7 +81,6 @@
             </a>
          </div>
       </section>
-      <!-- plant -->
       <div id="plant" class="section  product">
          <div class="container">
             <div class="row">
@@ -236,8 +235,8 @@
       </section>
       </div>
       {% endblock %}
-      <!-- end about -->
-      <!--Our  Clients -->
+       end about
+      Our  Clients
       {% block testmonial  %}
       <div id="plant" class="section_Clients layout_padding padding_bottom_0">
          <div class="container">
@@ -259,14 +258,12 @@
 
                         <div id="testimonial" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
   <ul class="carousel-indicators">
     <li data-target="#testimonial" data-slide-to="0" class="active"></li>
     <li data-target="#testimonial" data-slide-to="1"></li>
     <li data-target="#testimonial" data-slide-to="2"></li>
   </ul>
 
-  <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="titlepage">
@@ -300,7 +297,6 @@
     </div>
   </div>
 
-  <!-- Left and right controls -->
   <a class="carousel-control-prev" href="#testimonial" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </a>
@@ -318,8 +314,7 @@
       </div>
       {% endblock %}
    </div>
-      <!-- end Our  Clients -->
-      <!-- start Contact Us-->
+
       {% block contact  %}
       <div id="plant" class="contact_us layout_padding">
          <div class="container">
@@ -431,5 +426,13 @@
        </div>
     </div>
     {% endblock %}
+
+      {% load socialaccount %}
+      <h1>My Google OAuth Project </h1>
+      {% if user.is_authenticated %}
+        <p>Welcome, You are logged in as {{ user.username }}</p>
+      {% else %}
+        <a href="{% provider_login_url 'google' %}">Login With Google</a>
+      {% endif %}
    </body>
 </html>

@@ -6,6 +6,8 @@ urlpatterns = [
     path('', index),
     path('main/', index, name='main'),
     path('about/', about, name='about'),
+    path('clients/', clients, name='clients'),
+    path('contact/', contact, name='contact'),
     path('testmonial/', testmonial, name='testmonial'),
     path('category/', CategoryListView.as_view(), name='category'),
     path('category/add', CategoryCreateView.as_view(), name='category-add'),

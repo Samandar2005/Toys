@@ -27,6 +27,14 @@ def order(request):
     return render(request, 'order.html')
 
 
+def contact(request):
+    return render(request, 'contact.html')
+
+
+def clients(request):
+    return render(request, 'clients.html')
+
+
 def testmonial(request):
     return render(request, 'testmonial.html')
 
