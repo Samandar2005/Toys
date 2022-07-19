@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -7,7 +8,8 @@
    </head>
    <!-- body -->
    <body class="main-layout">
-      {% block navbar %}
+      <h1> {{user.username}} </h1>
+            {% block navbar %}
       <section >
          <div id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -86,7 +88,7 @@
             <div class="row">
                <div class="col-md-12 ">
                   <div class="titlepage">
-                     <h2><strong class="black"> Our</strong>  Products</h2>
+                     <h2><strong class="black"> Our</strong>Products</h2>
                      <span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</span>
                   </div>
                </div>
@@ -96,56 +98,63 @@
          <div class="clothes_main section ">
           <div class="container">
             <div class="row">
+               {% for item in toys %}
                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                   <div class="sport_product">
-                     <figure><img src="{% static 'images/basketball.png' %}" alt="img"/></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>basket ball</h4>
+                     <figure><img src="{{item.img}}" alt="img"/></figure>
+                    <h3> $<strong class="price_text">{{item.price}}</strong></h3>
+                     <h4>{{item.name}}</h4>
+
+                     <div class="left_part" >
+                        {% if perms.home.can_change_toys %}
+                          <a class="main_a" href="{% url 'toys-change' item.id %}">Change</a>
+                        {% endif %}
+
+                        {% if perms.home.can_delete_toys %}
+                          <a class="main_a" href="{% url 'toys-delete' item.id %}">Delete</a>
+                        {% endif %}
+                      </div>
                   </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="{% static 'images/t-shirt.png' %}" alt="img" ></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4> T-Shirt</h4>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="{% static 'images/game.png' %}" alt="img"/></figure>
-                     <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>Game</h4>
-                  </div>
-               </div>
 
 
-
-
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                  <div class="sport_product">
-                     <figure><img src="{% static 'images/basketball.png' %}" alt="img"></figure>
-                   <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>basket ball</h4>
-                  </div>
                </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="{% static 'images/t-shirt.png' %}" alt="img"></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>T-Shirt</h4>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                  <div class="sport_product">
-                     <figure><img src="{% static 'images/game.png' %}" alt="img"></figure>
-                    <h3> $<strong class="price_text">50</strong></h3>
-                     <h4>Game</h4>
-                  </div>
-               </div>
+               {% endfor %}
              </div>
             </div>
            </div>
       </div>
+      {% endblock %}
+
+      {% block aksiya %}
+
+      <div id="plant" class="section  product">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="titlepage1">
+                     <h2 style="text-align: center; margin: 10px; padding: 0;" class="hello12">Aksiya Products</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+         <div class="clothes_main section ">
+          <div class="container">
+            <div class="row">
+               {% for item in aksiya %}
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="sport_product1">
+                     <figure><img src="{{item.img}}" alt="img"/></figure>
+                    <h2 class="price_text1"> $<strong class="price_text1">{{item.old_price}}</strong></h2>
+                    <h3> $<strong>{{item.new_price}}</strong></h3>
+                     <h4>{{item.name}}</h4>
+                  </div>
+               </div>
+               {% endfor %}
+             </div>
+            </div>
+           </div>
+
       {% endblock %}
 
 

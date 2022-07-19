@@ -1,0 +1,13 @@
+<div>
+  {% if not_found%}
+      <p style="color: red;">The username or password incorrect. Please try again</p>
+  {% endif %}
+</div>
+
+<div>
+  <form action="" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" value="Submit">
+  </form>
+</div>

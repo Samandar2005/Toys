@@ -1,18 +1,54 @@
 from django.urls import path
 from .views import *
 from django.views.decorators.cache import cache_page
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
+    path('logout', LogoutView.as_view(),  name='logout'),
     path('', index),
     path('main/', index, name='main'),
     path('about/', about, name='about'),
+    path('abs/', abs, name='abs'),
+    path('main-register/', main_register, name='main_register'),
     path('clients/', clients, name='clients'),
     path('contact/', contact, name='contact'),
     path('testmonial/', testmonial, name='testmonial'),
     path('category/', CategoryListView.as_view(), name='category'),
     path('category/add', CategoryCreateView.as_view(), name='category-add'),
-    path('category/change/<int:pk>', CategoryUpdateView.as_view(), name='category-change'),
-    path('category/delete/<int:pk>', CategoryDeleteView.as_view(), name='category-delete'),
+    path('category/change/<int:pk>',
+         CategoryUpdateView.as_view(), name='category-change'),
+    path('category/delete/<int:pk>',
+         CategoryDeleteView.as_view(), name='category-delete'),
+
+    path('region/', RegionListView.as_view(), name='region'),
+    path('region/add', RegionCreateView.as_view(), name='region-add'),
+    path('region/change/<int:pk>',
+         RegionUpdateView.as_view(), name='region-change'),
+    path('region/delete/<int:pk>',
+         RegionDeleteView.as_view(), name='region-delete'),
+
+
+    path('country/', CountryListView.as_view(), name='country'),
+    path('country/add', CountryCreateView.as_view(), name='country-add'),
+    path('country/change/<int:pk>',
+         CountryUpdateView.as_view(), name='country-change'),
+    path('country/delete/<int:pk>',
+         CountryDeleteView.as_view(), name='country-delete'),
+
+    path('company/', CompanyListView.as_view(), name='company'),
+    path('company/add', CompanyCreateView.as_view(), name='company-add'),
+    path('company/change/<int:pk>',
+         CompanyUpdateView.as_view(), name='company-change'),
+    path('company/delete/<int:pk>',
+         CompanyDeleteView.as_view(), name='company-delete'),
+
+    path('brend/', BrendListView.as_view(), name='brend'),
+    path('brend/add', BrendCreateView.as_view(), name='brend-add'),
+    path('brend/change/<int:pk>',
+         BrendUpdateView.as_view(), name='brend-change'),
+    path('brend/delete/<int:pk>',
+         BrendDeleteView.as_view(), name='brend-delete'),
+
     path('gender/', GenderListView.as_view(), name='gender'),
     path('gender/add', GenderCreateView.as_view(), name='gender-add'),
     path('gender/change/<int:pk>',
@@ -21,7 +57,8 @@ urlpatterns = [
          GenderDeleteView.as_view(), name='gender-delete'),
 
     path('category_type/', Category_typeListView.as_view(), name='category_type'),
-    path('category_type/add', Category_typeCreateView.as_view(), name='category_type-add'),
+    path('category_type/add', Category_typeCreateView.as_view(),
+         name='category_type-add'),
     path('category_type/change/<int:pk>',
          Category_typeUpdateView.as_view(), name='category_type-change'),
     path('category_type/delete/<int:pk>',
@@ -40,4 +77,29 @@ urlpatterns = [
          ToysUpdateView.as_view(), name='toys-change'),
     path('toys/delete/<int:pk>',
          ToysDeleteView.as_view(), name='toys-delete'),
+
+    path('coupon/', CouponListView.as_view(), name='coupon'),
+    path('coupon/add', CouponCreateView.as_view(), name='coupon-add'),
+    path('coupon/change/<int:pk>',
+         CouponUpdateView.as_view(), name='coupon-change'),
+    path('coupon/delete/<int:pk>',
+         CouponDeleteView.as_view(), name='coupon-delete'),
+
+    path('aksiya/', AksiyaListView.as_view(), name='aksiya'),
+    path('aksiya/add', AksiyaCreateView.as_view(), name='aksiya-add'),
+    path('aksiya/change/<int:pk>',
+         AksiyaUpdateView.as_view(), name='aksiya-change'),
+    path('aksiya/delete/<int:pk>',
+         AksiyaDeleteView.as_view(), name='aksiya-delete'),
+
+    path('aksiya_code/', Aksiya_CodeListView.as_view(), name='aksiya_code'),
+    path('aksiya_code/add', Aksiya_CodeCreateView.as_view(), name='aksiya_code-add'),
+    path('aksiya_code/change/<int:pk>',
+         Aksiya_CodeUpdateView.as_view(), name='aksiya_code-change'),
+    path('aksiya_code/delete/<int:pk>',
+         Aksiya_CodeDeleteView.as_view(), name='aksiya_code-delete'),
+
+    path('register/', user_register_view, name='register'),
+    path('login/', user_login_view, name='login'),
+    path('toys-order/<int:pk>', user_login_view, name='toys-order'),
 ]

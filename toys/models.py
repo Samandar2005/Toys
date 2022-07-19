@@ -26,13 +26,6 @@ class Category(models.Model):
         return f"{self.from_category} {self.to_category}"
 
 
-class Region(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return f"{self.name}"
-
-
 class Country(models.Model):
     name = models.CharField(max_length=50)
 
@@ -40,12 +33,21 @@ class Country(models.Model):
         return f"{self.name}"
 
 
-class Company(models.Model):
+class Region(models.Model):
     name = models.CharField(max_length=50)
+
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.name} {self.country}"
+        return f"{self.name}"
+
+
+class Company(models.Model):
+    name = models.CharField(max_length=50)
+    region = models.ForeignKey(Region, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.name} {self.region}"
 
 
 class Brend(models.Model):
@@ -81,13 +83,14 @@ class Toys(models.Model):
     name = models.CharField(max_length=50)
     price = models.FloatField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    brend = models.ForeignKey(Brend, on_delete=models.CASCADE)
     gender = models.ForeignKey(Gender, on_delete=models.CASCADE)
     toys_type = models.ForeignKey(Category_type, on_delete=models.CASCADE)
     img = models.ImageField(upload_to='static/images')
     delivery = models.ForeignKey(Delivery, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.name} {self.price} {self.category} {self.gender} {self.toys_type} {self.img} {self.delivery}"
+        return f"{self.name} {self.price} {self.category} {self.gender} {self.brend} {self.toys_type} {self.img} {self.delivery}"
 
 
 class Order(models.Model):
@@ -112,8 +115,8 @@ class OrderItem(models.Model):
 
 class Coupon(models.Model):
     code = models.CharField(max_length=30, unique=True)
-    valid_from = models.DateTimeField()
-    valid_to = models.DateTimeField()
+    valid_from = models.DateField()
+    valid_to = models.DateField()
     status = models.BooleanField(default=False)
 
     def __str__(self) -> str:
@@ -133,11 +136,11 @@ class Aksiya(models.Model):
     old_price = models.FloatField()
     new_price = models.FloatField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    brend = models.ForeignKey(Brend, on_delete=models.CASCADE)
     gender = models.ForeignKey(Gender, on_delete=models.CASCADE)
     toys_type = models.ForeignKey(Category_type, on_delete=models.CASCADE)
     img = models.ImageField(upload_to='static/images')
     delivery = models.ForeignKey(Delivery, on_delete=models.CASCADE)
-    chegirma = models.ImageField()
     code = models.ForeignKey(Aksiya_Code, on_delete=models.CASCADE)
 
     def __str__(self):

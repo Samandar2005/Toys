@@ -27,10 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,12 +41,14 @@ INSTALLED_APPS = [
     'apiv0',
     'rest_framework',
     'rest_framework_simplejwt',
-    'django.contrib.sites',
+    'oauth2_provider',
+    'corsheaders',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-
+    'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.facebook',
 ]
 
 MIDDLEWARE = [
@@ -144,38 +146,44 @@ REST_FRAMEWORK = {
     ]
 }
 
-# AUTHENTICATION_BACKENDS = [
-#     'django.contrib.auth.backends.ModelBackend',
-#     'allauth.account.auth_backends.AuthenticationBackend'
-# ]
 
 SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        'SCOPE': [
-            'profile',
-            'email',
-        ],
-        'AUTH_PARAMS': {
-            'access_type': 'online',
-        }
-    }
+    'facebookAuth': {
+        'clientID': '795249804944402',
+        'clientSecret': '00047b44a6346dcc42740c492dbc3208',
+        'callbackURL': '127.0.0.1:8000/auth/facebook/callback',
+        'profileURL': 'https://graph.facebook.com/v2.5/me?fields=first_name,last_name,email',
+        'profileFields': ['id', 'email', 'name']
+    },
 }
 
-SITE_ID = 2
 
+SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # 875210774801-n564u3omej2rd0291iunkkkk83bptio3.apps.googleusercontent.com
 
 
 # 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
 
-AUTHENTICATION_BACKENDS = [
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
 
-]
+# AUTHENTICATION_BACKENDS = [
+#     # Needed to login by username in Django admin, regardless of `allauth`
+#     'django.contrib.auth.backends.ModelBackend',
+#     # `allauth` specific authentication methods, such as login by e-mail
+#     'allauth.account.auth_backends.AuthenticationBackend',
+
+#     "graphql_jwt.backends.JSONWebTokenBackend",
+
+# ]
+
+# 266483221994-mkghjk8f7rcihl2kjbqe46sgqkdlefrr.apps.googleusercontent.com
+# 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
+
+
+# facebooc
+#id== 795249804944402
+# key== 00047b44a6346dcc42740c492dbc3208

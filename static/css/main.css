@@ -1,0 +1,12 @@
+.price_text1{
+  text-decoration-line: line-through;
+   text-decoration-color: red;
+}
+.sport_product1{
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
+}
+.left_part{
+  margin: 5px;
+}

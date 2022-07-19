@@ -19,12 +19,16 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework_simplejwt.views import TokenVerifyView
 from django.views.generic import TemplateView
 from django.contrib.auth.views import LogoutView
+
 urlpatterns = [
     path('', include('toys.urls')),
+    path('apiv0/', include('apiv0.urls')),
     path('admin/', admin.site.urls),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     path('accounts/', include('allauth.urls')),
+    path('api-auth/', include('api_auth.urls')),
+    path('grappelli/', include('grappelli.urls')),
     path('logout', LogoutView.as_view()),
 ]

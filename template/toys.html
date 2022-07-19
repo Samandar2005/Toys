@@ -1,0 +1,54 @@
+<div class="hello">
+  <div class="buy_now_bt">
+    <button class="buy_text11">
+      {% if perms.home.can_add_toys %}
+        <a class="main_a1" href="{% url 'toys-add' %}">Add</a>
+      {% endif %}
+    </button>
+  </div>
+  <div class="buy_now_bt">
+    <button class="buy_text11">
+      <a class="main_a1" href="{% url 'main' %}">Exit</a>
+    </button>
+  </div>
+
+</div>
+
+<form action="" method="get">
+  <input class="input" type="text" placeholder="name" name="name" />
+  <input class="input1" type="submit" value="Search" />
+</form>
+
+
+<div class="layout_padding gallery_section">
+  <div class="container">
+    <ul class="myul">
+
+      <div class="clothes_main section ">
+        <div class="container">
+          <div class="row">
+             {% for item in toys %}
+             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div class="sport_product">
+                   <figure><img src="{{item.img}}" alt="img"/></figure>
+                  <h3> $<strong class="price_text">{{item.price}}</strong></h3>
+                   <h4>{{item.name}}</h4>
+                </div>
+                <div class="left_part" >
+                  {% if perms.home.can_change_toys %}
+                    <a class="main_a" href="{% url 'toys-change' item.id %}">Change</a>
+                  {% endif %}
+
+                  {% if perms.home.can_delete_toys %}
+                    <a class="main_a" href="{% url 'toys-delete' item.id %}">Delete</a>
+                  {% endif %}
+                </div>
+             </div>
+             {% endfor %}
+           </div>
+          </div>
+         </div>
+    </div>
+
+
+</div>
